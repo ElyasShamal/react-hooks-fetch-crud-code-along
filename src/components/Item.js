@@ -12,7 +12,7 @@ function Item({ item, onUpdateItem, onDeleteItem }) {
       }),
     })
       .then((r) => r.json())
-      .then((updatedItem) => updatedItem(onUpdateItem));
+      .then((updatedItem) => onUpdateItem(updatedItem));
   }
 
   function handleDeleteClick() {
